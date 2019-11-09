@@ -1,6 +1,6 @@
 language: csharp
 sudo: required
-dotnet: 2.2.101
+dotnet: 3.0.100
 dist: xenial
 before_install:
   - chmod +x build.sh

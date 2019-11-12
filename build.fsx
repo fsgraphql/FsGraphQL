@@ -20,6 +20,14 @@ open Fake.IO
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators
 
+let runNetCore path =
+    [ path ] |> CreateProcess.fromRawCommand "dotnet"
+
+let runNetFramework path =
+    if Environment.isWindows
+    then CreateProcess.fromRawCommand path []
+    else [ path ] |> CreateProcess.fromRawCommand "mono"
+
 Target.create "Clean" (fun _ ->
     !! "src/**/bin"
     ++ "src/**/obj"
@@ -44,8 +52,10 @@ Target.create "Build" (fun _ ->
 
 Target.create "Test" (fun _ ->
     !! "tests/**/bin/Release/*/*Tests.dll"
-    ++ "tests/**/bin/Release/*/*Tests.exe"
-    |> Expecto.run id)
+    |> Seq.iter (runNetCore >> Proc.run >> ignore)
+
+    !! "tests/**/bin/Release/*/*Tests.exe"
+    |> Seq.iter (runNetFramework >> Proc.run >> ignore))
 
 Target.create "All" ignore
 

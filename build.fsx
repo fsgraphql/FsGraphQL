@@ -3,7 +3,6 @@ nuget Fake.Core.Target
 nuget Fake.DotNet.Cli
 nuget Fake.DotNet.AssemblyInfoFile
 nuget Fake.Core.ReleaseNotes
-nuget Fake.DotNet.Testing.Expecto
 nuget Fake.DotNet.Paket //"
 
 #load ".fake/build.fsx/intellisense.fsx"
@@ -15,7 +14,6 @@ nuget Fake.DotNet.Paket //"
 
 open Fake.Core
 open Fake.DotNet
-open Fake.DotNet.Testing
 open Fake.IO
 open Fake.IO.Globbing.Operators
 open Fake.Core.TargetOperators

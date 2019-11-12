@@ -13,7 +13,7 @@ group Libraries
 
 group UnitTests
     source https://api.nuget.org/v3/index.json
-    frameworks: net472, netcoreapp2.2
+    frameworks: net472, netcoreapp3.0
 
     nuget FSharp.Core
     nuget Expecto

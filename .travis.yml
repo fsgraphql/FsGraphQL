@@ -10,3 +10,5 @@ global:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
     - DOTNET_CLI_TELEMETRY_OPTOUT=1
     - FAKE_DETAILED_ERRORS=true
+notifications:
+  slack: fsgraphql:wOcTcqTC2ai3689UgfjomxFP

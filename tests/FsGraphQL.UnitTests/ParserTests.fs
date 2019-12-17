@@ -3,9 +3,11 @@
 open Expecto
 open Assertions
 open FsGraphQL.Ast
-open FsGraphQL.Ast.Parser
+open FsGraphQL.Ast.Parsing.Parser
 
-let parseAndAssert expected query = expected |> equals (parse query)
+let parseAndAssert expected query =
+    let actual = query |> parse |> Document.OfParsed
+    equals actual expected
 
 let queryShorthand selectionSet = 
     selectionSet

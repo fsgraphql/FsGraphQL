@@ -5,6 +5,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Document.fs" />
+    <Compile Include="Position.fs" />
+    <Compile Include="ParsedDocument.fs" />
+    <Compile Include="ParserResults.fs" />
+    <Compile Include="Extensions.fs" />
     <Compile Include="Parser.fs" />
   </ItemGroup>
   <ItemGroup>

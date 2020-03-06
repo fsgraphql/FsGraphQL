@@ -5,11 +5,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Document.fs" />
-    <Compile Include="Position.fs" />
-    <Compile Include="ParsedDocument.fs" />
-    <Compile Include="ParserResults.fs" />
+    <Compile Include="Parsing\Position.fs" />
+    <Compile Include="Parsing\Document.fs" />
+    <Compile Include="Parsing\Internal\Operators.fs" />
+    <Compile Include="Parsing\Internal\BaseParsers.fs" />
+    <Compile Include="Parsing\Internal\DefinitionParsers.fs" />
+    <Compile Include="Parsing\ParserResults.fs" />
+    <Compile Include="Parsing\Parser.fs" />
     <Compile Include="Extensions.fs" />
-    <Compile Include="Parser.fs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />

@@ -236,124 +236,165 @@ module private Conversions =
     let convertDocument (parsed : Parsing.Document) =
         { Definitions = List.map convertDefinition parsed.Definitions }
 
+/// Contains extensions for GraphQL base types.
 [<AutoOpen>]
 module Extensions =
     type Value with
+        /// Gets a Value type from a parsed Value type.
         static member OfParsed = convertValue
 
     type ObjectField with
+        /// Gets an ObjectField type from a parsed ObjectField type.
         static member OfParsed = convertObjectField
 
     type Argument with
+        /// Gets an Argument type from a parsed Argument type.
         static member OfParsed = convertArgument
 
     type Directive with
+        /// Gets a Directive type from a parsed Directive type.
         static member OfParsed = convertDirective
 
     type FragmentSpread with
+        /// Gets a FragmentSpread type from a parsed FragmentSpread type.
         static member OfParsed = convertFragmentSpread
 
     type InlineFragment with
+        /// Gets an InlineFragment type from a parsed InlineFragment type.
         static member OfParsed = convertInlineFragment
 
     type Field with
+        /// Gets a Field type from a parsed Field type.
         static member OfParsed = convertField
 
     type Selection with
+        /// Gets a Selection type from a parsed Selection type.
         static member OfParsed = convertSelection
 
     type Type with
+        /// Gets a Type type from a parsed Type type.
         static member OfParsed = convertType
 
     type VariableDefinition with
+        /// Gets a VariableDefinition type from a parsed VariableDefinition type.
         static member OfParsed = convertVariableDefinition
 
     type Operation with
+        /// Gets an Operation type from a parsed Operation type.
         static member OfParsed = convertOperation
 
     type OperationDefinition with
+        /// Gets an OperationDefinition type from a parsed OperationDefinition type.
         static member OfParsed = convertOperationDefinition
 
     type FragmentDefinition with
+        /// Gets a FragmentDefinition type from a parsed FragmentDefinition type.
         static member OfParsed = convertFragmentDefinition
 
     type ExecutableDefinition with
+        /// Gets an ExecutableDefinition type from a parsed ExecutableDefinition type.
         static member OfParsed = convertExecutableDefinition
 
     type OperationTypeDefinition with
+        /// Gets an OperationTypeDefinition type from a parsed OperationTypeDefinition type.
         static member OfParsed = convertOperationTypeDefinition
 
     type SchemaDefinition with
+        /// Gets a SchemaDefinition type from a parsed SchemaDefinition type.
         static member OfParsed = convertSchemaDefinition
 
     type InputValueDefinition with
+        /// Gets an InputValueDefinition type from a parsed InputValueDefinition type.
         static member OfParsed = convertInputValueDefinition
 
     type FieldDefinition with
+        /// Gets a FieldDefinition type from a parsed FieldDefinition type.
         static member OfParsed = convertFieldDefinition
 
     type InputObjectTypeDefinition with
+        /// Gets an InputObjectTypeDefinition type from a parsed InputObjectTypeDefinition type.
         static member OfParsed = convertInputObjectTypeDefinition
 
     type EnumValueDefinition with
+        /// Gets an EnumValueDefinition type from a parsed EnumValueDefinition type.
         static member OfParsed = convertEnumValueDefinition
 
     type EnumTypeDefinition with
+        /// Gets an EnumTypeDefinition type from a parsed EnumTypeDefinition type.
         static member OfParsed = convertEnumTypeDefinition
 
     type UnionTypeDefinition with
+        /// Gets an UnionTypeDefinition type from a parsed UnionTypeDefinition type.
         static member OfParsed = convertUnionTypeDefinition
 
     type InterfaceTypeDefinition with
+        /// Gets an InterfaceTypeDefinition type from a parsed InterfaceTypeDefinition type.
         static member OfParsed = convertInterfaceTypeDefinition
 
     type ObjectTypeDefinition with
+        /// Gets an ObjectTypeDefinition type from a parsed ObjectTypeDefinition type.
         static member OfParsed = convertObjectTypeDefinition
 
     type ScalarTypeDefinition with
+        /// Gets a ScalarTypeDefinition type from a parsed ScalarTypeDefinition type.
         static member OfParsed = convertScalarTypeDefinition
 
     type TypeDefinition with
+        /// Gets a TypeDefinition type from a parsed TypeDefinition type.
         static member OfParsed = convertTypeDefinition
 
     type InputObjectTypeExtension with
+        /// Gets an InputObjectTypeExtension type from a parsed InputObjectTypeExtension type.
         static member OfParsed = convertInputObjectTypeExtension
 
     type EnumTypeExtension with
+        /// Gets an EnumTypeExtension type from a parsed EnumTypeExtension type.
         static member OfParsed = convertEnumTypeExtension
 
     type UnionTypeExtension with
+        /// Gets an UnionTypeExtension type from a parsed UnionTypeExtension type.
         static member OfParsed = convertUnionTypeExtension
 
     type InterfaceTypeExtension with
+        /// Gets an InterfaceTypeExtension type from a parsed InterfaceTypeExtension type.
         static member OfParsed = convertInterfaceTypeExtension
 
     type ObjectTypeExtension with
+        /// Gets an ObjectTypeExtension type from a parsed ObjectTypeExtension type.
         static member OfParsed = convertObjectTypeExtension
 
     type ScalarTypeExtension with
+        /// Gets a ScalarTypeExtension type from a parsed ScalarTypeExtension type.
         static member OfParsed = convertScalarTypeExtension
 
     type TypeExtension with
+        /// Gets a TypeExtension type from a parsed TypeExtension type.
         static member OfParsed = convertTypeExtension
 
     type SchemaExtension with
+        /// Gets a SchemaExtension type from a parsed SchemaExtension type.
         static member OfParsed = convertSchemaExtension
 
     type TypeSystemExtension with
+        /// Gets a TypeSystemExtension type from a parsed TypeSystemExtension type.
         static member OfParsed = convertTypeSystemExtension
 
     type DirectiveLocation with
+        /// Gets a DirectiveLocation type from a parsed DirectiveLocation type.
         static member OfParsed = convertDirectiveLocation
 
     type DirectiveDefinition with
+        /// Gets a DirectiveDefinition type from a parsed DirectiveDefinition type.
         static member OfParsed = convertDirectiveDefinition
 
     type TypeSystemDefinition with
+        /// Gets a TypeSystemDefinition type from a parsed TypeSystemDefinition type.
         static member OfParsed = convertTypeSystemDefinition
 
     type Definition with
+        /// Gets a Definition type from a parsed Definition type.
         static member OfParsed = convertDefinition
 
     type Document with
+        /// Gets a Document type from a parsed Document type.
         static member OfParsed = convertDocument
